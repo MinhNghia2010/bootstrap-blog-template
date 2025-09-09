@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<script src="https://kit.fontawesome.com/ef60490e32.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+    <header class="d-flex flex-column align-items-center">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Logo.svg" alt="Logo" id="brand-logo">
+                </a>
+                <!-- Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- nav menu -->
+                        <ul class="navbar-nav justify-content-center flex-grow-1 gap-lg-5 list-group-flush">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Single Post</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                        <!-- nav-left -->
+                         <div class="nav-left d-flex align-item-md-center justify-content-between">
+                            <form class="d-flex position-relative d-flex align-items-center searchbar" role="search">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn position-absolute border-0 p-0" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                            <!-- theme toggle -->
+                            <input type="checkbox" id="theme-toggle" class="d-none"/>
+                            <label for="theme-toggle">
+                                <div class="circle">
+                                    <i class="fa-solid fa-sun"></i>
+                                    <i class="fa-solid fa-moon"></i>
+                                </div>
+                            </label>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-info d-flex justify-content-center align-items-center py-4">
+            <div class="content d-flex flex-column align-items-center">
+                <h1>Page Title</h1>
+                <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Link One</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card text-bg-dark p-0">
+            <img src="assets/overlay.jpg" class="card-img" alt="overlay">
+            <div class="card-img-overlay z-2 d-flex flex-column justify-content-end">
+                <div class="category">Technology</div>
+                <h1 class="card-title mb-4">
+                    The Impact of Technology on the <br>
+                    Workplace: How Technology is Changing
+                </h1>
+                <div class="post-info d-flex align-items-center">
+                    <div class="user">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span class="author">Tracey Wilson</span>
+                    </div>
+                    <span class="date">August 20, 2022</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="d-flex flex-column align-items-center">
+        <div class="content">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-custom" id="postGrid">
+                    
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn" id="loadMoreBtn">Load More</button>
+
+        <div class="ads-space">
+            <div class="container d-flex justify-content-center flex-column align-items-center">
+                <div class="info d-flex flex-column align-items-center">
+                    <small>Advertisement</small>
+                    <span class="h5 m-0">You can place ads</span>
+                    <span>750x100</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content container">
+            <div class="row justify-content-center g-2">
+                <div class="info col-12 col-md-6 col-lg-3 d-flex flex-column align-items-start">
+                    <div class="about">
+                        <h5><b>About</b></h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    </div>
+                    <div class="contact d-flex flex-column">
+                        <span><b>Email :</b>info@jstemplate.net</span>
+                        <span><b>Phone :</b>880 123 456 789</span>
+                    </div>
+                </div>
+                <div class="link col-12 col-md-6 col-lg-5 d-flex justify-content-between justify-content-lg-around">
+                <div class="box">
+                    <h5><b>Quick Link</b></h5>
+                    <ul class="px-0 py-2">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Archived</a></li>
+                        <li><a href="#">Author</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h5><b>Category</b></h5>
+                    <ul class="px-0 py-2">
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Economy</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="newsletter col-12 col-md-8 col-lg-4 d-flex flex-column align-items-center">
+                    <div class="heading d-flex flex-column align-items-center">
+                        <h5><b>Weekly Newsletter</b></h5>
+                        <p class="m-0">Get blog articles and offers via email</p>
+                    </div>
+                    <div class="form d-flex flex-column align-items-start justify-content-end gap-2 w-100">
+                        <div class="email d-flex align-items-center">
+                            <input type="email" placeholder="Your email" autocomplete="off">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <button>Subcribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center container">
+            <a href="#" class="copyright-info">
+                <img src="assets/Copyright Info.svg.svg" alt="copyright-info" id="footer-logo">
+            </a>
+            <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Terms of Use</a></li>
+                    <li class="breadcrumb-item"><a href="#">Privacy Policy</a></li>
+                    <li class="breadcrumb-item"><a href="#">Cookie Policy</a></li>
+                </ol>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

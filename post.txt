@@ -1,0 +1,16 @@
+<div class="col">
+    <div class="card">
+        <img src="src/post1.jpg" class="card-img" alt="post1">
+        <div class="card-body p-2">
+            <span class="category">Technology</span>
+            <h4 class="card-title mt-3"><b>The Impact of Technology on the Workplace: How Technology is Changing</b></h4>
+            <div class="post-info d-flex align-items-center">
+                <div class="user">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span class="author">Tracey Wilson</span>
+                </div>
+                <span class="date">August 20, 2022</span>
+            </div>
+        </div>
+    </div>
+</div>
